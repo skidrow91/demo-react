@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 
 class Header extends Component {
     render (){
@@ -8,26 +9,26 @@ class Header extends Component {
     				<a href="index.html" className="logo"><img src={require("../../assets/images/logo.png")} alt="" /></a>
     				<ul id="navigation">
     					<li className="selected">
-    						<a href="index.html">Home</a>
+    						<Link to="/">Home</Link>
     					</li>
     					<li className="menu">
-    						<a href="about.html">About</a>
+    						<Link to="/about">About</Link>
     						<ul className="primary">
     							<li>
-    								<a href="product.html">Product</a>
+    								<Link to="/product">Product</Link>
     							</li>
     						</ul>
     					</li>
     					<li className="menu">
-    						<a href="blog.html">Blog</a>
+    						<Link to="/blog">Blog</Link>
     						<ul className="secondary">
     							<li>
-    								<a href="singlepost.html">Single post</a>
+                                    <Link to="/singlepost">Single post</Link>
     							</li>
     						</ul>
     					</li>
-    					<li>
-    						<a href="contact.html">Contact</a>
+    					<li>    						
+                            <Link to="/contact">Contact</Link>
     					</li>
     				</ul>
     			</div>
